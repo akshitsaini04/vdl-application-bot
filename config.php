@@ -1,24 +1,15 @@
 <?php
+// This file securely loads your secrets from Vercel's Environment Variables.
+// NEVER put your actual tokens in this file when using Vercel.
 
-// Find this on the "General Information" page of your Discord Application
-define('APPLICATION_ID', 'YOUR_APPLICATION_ID_HERE');
-
-// --- NEW: Add these two lines for the login system ---
-// Find this on the "OAuth2 > General" page
-define('CLIENT_ID', 'YOUR_CLIENT_ID_HERE'); 
-define('CLIENT_SECRET', 'YOUR_CLIENT_SECRET_HERE');
-
-// Find this on the "Bot" page
-define('BOT_TOKEN', 'YOUR_BOT_TOKEN_HERE');
-
-// Find this on the "General Information" page
-define('PUBLIC_KEY', 'YOUR_APPLICATION_PUBLIC_KEY_HERE');
-
-// Right-click your private admin channel and "Copy Channel ID"
-define('ADMIN_CHANNEL_ID', 'YOUR_ADMIN_CHANNEL_ID_HERE');
-
-// Right-click your public results channel and "Copy Channel ID"
-define('PUBLIC_CHANNEL_ID', 'YOUR_PUBLIC_CHANNEL_ID_HERE');
+// These values are pulled from your Vercel project's "Settings > Environment Variables" tab.
+define('APPLICATION_ID', $_ENV['APPLICATION_ID'] ?? null);
+define('CLIENT_ID', $_ENV['CLIENT_ID'] ?? null);
+define('CLIENT_SECRET', $_ENV['CLIENT_SECRET'] ?? null);
+define('BOT_TOKEN', $_ENV['BOT_TOKEN'] ?? null);
+define('PUBLIC_KEY', $_ENV['PUBLIC_KEY'] ?? null);
+define('ADMIN_CHANNEL_ID', $_ENV['ADMIN_CHANNEL_ID'] ?? null);
+define('PUBLIC_CHANNEL_ID', $_ENV['PUBLIC_CHANNEL_ID'] ?? null);
 
 ?>
 
